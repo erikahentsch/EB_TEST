@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const port = process.env.PORT || 8080
+const PORT = process.env.port || 8080
 
 
 app.get('/', (req,res)=> {
@@ -11,6 +11,6 @@ app.get('/', (req,res)=> {
 
 
 
-app.listen(port, ()=>{
+app.listen(PORT, ()=>{
     console.log("we're working")
 });

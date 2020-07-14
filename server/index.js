@@ -3,11 +3,11 @@ const path = require('path')
 const app = express();
 
 
-app.use('', express.static('public'));
+app.use('*', express.static('public'));
 app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
 
-app.get('/', (req,res)=> {
-    res.send("Hello World")
+app.get('/server', (req,res)=> {
+    res.send("Hello from the back end")
 })
 
 

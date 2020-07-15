@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path')
 const app = express();
-// require('dotenv').config();
 
 
 app.get('/', (req,res)=> {
@@ -9,7 +8,8 @@ app.get('/', (req,res)=> {
 })
 
 app.get('/env', (req,res)=> {
-    res.send(process.env)
+    res.send(process.env.DEFAULT);
+    
 })
 
 
